@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WedstrijdGokApp (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "WedstrijdGokApp (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
