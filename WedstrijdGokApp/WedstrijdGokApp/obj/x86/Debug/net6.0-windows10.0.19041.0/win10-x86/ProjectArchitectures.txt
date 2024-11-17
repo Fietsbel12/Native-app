@@ -1,0 +1,1 @@
+C:\native\Native-app\WedstrijdGokApp\WedstrijdGokApp\WedstrijdGokApp.csproj;x86
