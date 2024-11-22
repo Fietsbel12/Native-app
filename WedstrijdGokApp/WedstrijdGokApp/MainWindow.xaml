@@ -9,11 +9,25 @@
     mc:Ignorable="d"
     Title="Wedstrijd gok app">
 
-    <StackPanel>
-        <TextBlock FontSize="25"
-                   FontWeight="Bold"
-                   TextAlignment="Center"
-                   HorizontalAlignment="Center"
-                   Margin="25">Gokken</TextBlock>
+    <StackPanel Margin="10" Spacing="10">
+        <!-- Titel -->
+        <TextBlock Text="Wedstrijd Gok App" FontSize="24" FontWeight="Bold" TextAlignment="Center" />
+
+        <!-- Synchroniseer Data -->
+        <Button Content="Synchroniseer Wedstrijden" Click="Synchroniseer_Click" HorizontalAlignment="Center" />
+
+        <!-- Geplande Wedstrijden -->
+        <TextBlock Text="Geplande Wedstrijden:" FontWeight="Bold" />
+        <ListBox x:Name="WedstrijdListView" Height="150" />
+
+        <!-- Weddenschap Plaatsen -->
+        <TextBlock Text="Plaats een Weddenschap:" FontWeight="Bold" />
+        <StackPanel Orientation="Horizontal" Spacing="10">
+            <TextBox x:Name="TeamInput" Width="200" PlaceholderText="Team" />
+            <Button Content="Plaats Weddenschap" Click="PlaatsWeddenschap_Click" />
+        </StackPanel>
+
+        <!-- Gebruikers Saldo -->
+        <TextBlock x:Name="SaldoText" Text="Saldo: 50 4S-dollars" FontWeight="Bold" />
     </StackPanel>
 </Window>

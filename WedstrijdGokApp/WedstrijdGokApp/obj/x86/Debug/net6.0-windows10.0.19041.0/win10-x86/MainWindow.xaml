@@ -11,7 +11,22 @@
 
     <StackPanel>
         <TextBlock FontSize="25"
-                   FontWeight="Bold">Gokken</TextBlock>
+                   FontWeight="Bold"
+                   TextAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Margin="25">Gokken</TextBlock>
+
+        <TextBlock Text="Geplande wedstrijden:" FontWeight="Bold"/>
+        <ListBox x:ConnectionId='2' x:Name="WedstrijdListView"/>
+
+        <TextBlock Text="Plaats een weddenschap" FontWeight="Bold"/>
+        <StackPanel Orientation="Horizontal" Spacing="10">
+            <TextBlock x:ConnectionId='4' x:Name="TeamInput" Width="200"/>
+            <Button x:ConnectionId='5' Content="Plaats weddenschap"                     />
+        </StackPanel>
+
+        <TextBlock x:ConnectionId='3' x:Name="SaldoText" Text="Saldo: 50 4S-dollars" FontWeight="Bold"/>
+
     </StackPanel>
 </Window>
 
