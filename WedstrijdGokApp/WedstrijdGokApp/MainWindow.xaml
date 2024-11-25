@@ -14,7 +14,7 @@
         <TextBlock Text="Wedstrijd Gok App" FontSize="24" FontWeight="Bold" TextAlignment="Center" />
 
         <!-- Synchroniseer Data -->
-        <Button Content="Synchroniseer Wedstrijden" Click="Synchroniseer_Click" HorizontalAlignment="Center" />
+        <Button Content="Synchroniseer Wedstrijden" Click="Button_Click_1"  HorizontalAlignment="Center" />
 
         <!-- Geplande Wedstrijden -->
         <TextBlock Text="Geplande Wedstrijden:" FontWeight="Bold" />
@@ -24,7 +24,7 @@
         <TextBlock Text="Plaats een Weddenschap:" FontWeight="Bold" />
         <StackPanel Orientation="Horizontal" Spacing="10">
             <TextBox x:Name="TeamInput" Width="200" PlaceholderText="Team" />
-            <Button Content="Plaats Weddenschap" Click="PlaatsWeddenschap_Click" />
+            <Button Content="Plaats Weddenschap" Click="Button_Click_2" />
         </StackPanel>
 
         <!-- Gebruikers Saldo -->
