@@ -29,29 +29,25 @@
     <AppXManifest Include="C:\native\Native-app\WedstrijdGokApp\WedstrijdGokApp\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-11-24T14:47:40.850</Modified>
+      <Modified>2024-11-28T12:48:33.365</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\native\Native-app\WedstrijdGokApp\WedstrijdGokApp\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-11-24T14:47:40.573</Modified>
+      <Modified>2024-11-28T12:48:32.941</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\native\Native-app\WedstrijdGokApp\WedstrijdGokApp\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\WedstrijdGokApp.runtimeconfig.json">
       <PackagePath>WedstrijdGokApp.runtimeconfig.json</PackagePath>
-      <Modified>2024-11-17T15:49:21.079</Modified>
+      <Modified>2024-11-28T12:48:32.706</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\native\Native-app\WedstrijdGokApp\WedstrijdGokApp\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\WedstrijdGokApp.dll">
       <PackagePath>WedstrijdGokApp.dll</PackagePath>
-      <Modified>2024-11-24T14:47:40.261</Modified>
+      <Modified>2024-11-28T12:48:31.931</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\native\Native-app\WedstrijdGokApp\WedstrijdGokApp\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\apphost.exe">
       <PackagePath>WedstrijdGokApp.exe</PackagePath>
-      <Modified>2024-11-24T14:47:40.304</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\native\Native-app\WedstrijdGokApp\WedstrijdGokApp\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\WedstrijdGokApp.deps.json">
-      <PackagePath>WedstrijdGokApp.deps.json</PackagePath>
-      <Modified>2024-11-17T15:49:21.054</Modified>
+      <Modified>2024-11-28T12:48:31.980</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lotus\.nuget\packages\microsoft.netcore.app.runtime.win-x86\6.0.27\runtimes\win-x86\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1012,6 +1008,10 @@
     <AppxPackagedFile Include="C:\Users\Lotus\.nuget\packages\microsoft.windowsappsdk\1.4.230913002\runtimes\win10-x86\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
       <Modified>2023-07-28T17:58:36.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\native\Native-app\WedstrijdGokApp\WedstrijdGokApp\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\WedstrijdGokApp.deps.json">
+      <PackagePath>WedstrijdGokApp.deps.json</PackagePath>
+      <Modified>2024-11-28T12:48:33.203</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\native\Native-app\WedstrijdGokApp\WedstrijdGokApp\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>

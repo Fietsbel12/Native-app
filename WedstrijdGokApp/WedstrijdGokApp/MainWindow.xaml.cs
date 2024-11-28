@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -55,31 +56,29 @@ namespace WedstrijdGokApp
 
         }
 
-        private async Task SynchroniseerWedstrijden() 
+        private static readonly HttpClient client = new HttpClient();
+
+        private async Task SynchroniseerWedstrijden()
         {
-            using (HttpClient client = new HttpClient())
+            string apiUrl = "https://example.com";
+            try
             {
-                string apiUrl = "https://pokeapi.co/api/v2/pokemon/gengar";
-
-                try 
+                var response = await client.GetAsync(apiUrl);
+                if (response.IsSuccessStatusCode)
                 {
-                    var response = await client.GetAsync(apiUrl);
-                    if (response.IsSuccessStatusCode) 
-                    {
-                        var json = await response.Content.ReadAsStringAsync();
-                        var wedstrijden = JsonSerializer.Deserialize<List<Wedstrijd>>(json);
+                    var json = await response.Content.ReadAsStringAsync();
+                    var wedstrijden = JsonSerializer.Deserialize<List<Wedstrijd>>(json);
 
-                        WedstrijdListView.ItemsSource = wedstrijden;
-                    }
-                    else 
-                    {
-                        SaldoText.Text = "Fout: Kon data niet ophalen.";
-                    }
+                    WedstrijdListView.ItemsSource = wedstrijden;
                 }
-                catch 
+                else
                 {
-                    SaldoText.Text = "Fout bij verbinden met API";
+                    SaldoText.Text = "Fout: Kon data niet ophalen.";
                 }
+            }
+            catch (HttpRequestException ex)
+            {
+                SaldoText.Text = $"Fout bij verbinden met API: {ex.Message}";
             }
         }
 

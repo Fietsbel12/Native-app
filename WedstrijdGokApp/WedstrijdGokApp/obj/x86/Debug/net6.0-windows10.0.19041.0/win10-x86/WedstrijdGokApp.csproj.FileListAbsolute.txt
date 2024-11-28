@@ -285,3 +285,4 @@ C:\native\Native-app\WedstrijdGokApp\WedstrijdGokApp\obj\x86\Debug\net6.0-window
 C:\native\Native-app\WedstrijdGokApp\WedstrijdGokApp\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\qualifiers.txt.intermediate
 C:\native\Native-app\WedstrijdGokApp\WedstrijdGokApp\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\MultipleQualifiersPerDimensionFound.txt
 C:\native\Native-app\WedstrijdGokApp\WedstrijdGokApp\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\ProjectArchitectures.txt
+C:\native\Native-app\WedstrijdGokApp\WedstrijdGokApp\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\WedstrijdGokApp.genpublishdeps.cache

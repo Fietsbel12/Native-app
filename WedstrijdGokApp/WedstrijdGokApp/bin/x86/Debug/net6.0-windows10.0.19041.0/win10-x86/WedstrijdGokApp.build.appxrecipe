@@ -37,9 +37,6 @@
     <AppxPackagedFile Include="C:\native\Native-app\WedstrijdGokApp\WedstrijdGokApp\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\apphost.exe">
       <PackagePath>WedstrijdGokApp.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\native\Native-app\WedstrijdGokApp\WedstrijdGokApp\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\WedstrijdGokApp.deps.json">
-      <PackagePath>WedstrijdGokApp.deps.json</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lotus\.nuget\packages\microsoft.netcore.app.runtime.win-x86\6.0.27\runtimes\win-x86\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
     </AppxPackagedFile>
@@ -759,6 +756,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lotus\.nuget\packages\microsoft.windowsappsdk\1.4.230913002\runtimes\win10-x86\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\native\Native-app\WedstrijdGokApp\WedstrijdGokApp\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\WedstrijdGokApp.deps.json">
+      <PackagePath>WedstrijdGokApp.deps.json</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\native\Native-app\WedstrijdGokApp\WedstrijdGokApp\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
