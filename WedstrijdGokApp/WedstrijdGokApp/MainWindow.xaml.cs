@@ -103,7 +103,7 @@ namespace WedstrijdGokApp
         { 
             public string TeamA {  get; set; }
             public string TeamB { get; set; }
-            public string Datum { get; set; }
+            public DateTime Datum { get; set; }
 
             public override string ToString()
             {
