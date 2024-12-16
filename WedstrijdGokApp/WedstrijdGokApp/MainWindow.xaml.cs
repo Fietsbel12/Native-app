@@ -15,6 +15,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using WedstrijdGokApp.Models;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -26,7 +27,8 @@ namespace WedstrijdGokApp
     /// </summary>
     public sealed partial class MainWindow : Window
     {
-        private int saldo = 50;
+        private List<Bet> Bets = new List<Bet>();
+        private decimal CurrentBalance = 50;
 
         public MainWindow()
         {
@@ -36,8 +38,7 @@ namespace WedstrijdGokApp
 
         private void LaadGegevens() 
         { 
-            SaldoText.Text = $"Saldo: {saldo} 4S-Dollars";
-
+            UpdateBalance();
             // Test wedstrijden
             var opgeslagenWedstrijden = new List<Wedstrijd>
             {
@@ -46,6 +47,11 @@ namespace WedstrijdGokApp
             };
 
             WedstrijdListView.ItemsSource = opgeslagenWedstrijden;
+        }
+
+        private void UpdateBalance()
+        {
+            SaldoText.Text = $"Saldo: {CurrentBalance} 4S-Dollars";
         }
 
 
@@ -60,11 +66,11 @@ namespace WedstrijdGokApp
 
         private async Task SynchroniseerWedstrijden()
         {
-            string apiUrl = "https://example.com";
+            string apiUrl = "http://c3-school-voetbal-laravel.test/api/matches";
             try
             {
                 var response = await client.GetAsync(apiUrl);
-                if (response.IsSuccessStatusCode)
+                if (response.IsSuccessStatusCode) 
                 {
                     var json = await response.Content.ReadAsStringAsync();
                     var wedstrijden = JsonSerializer.Deserialize<List<Wedstrijd>>(json);
@@ -84,26 +90,50 @@ namespace WedstrijdGokApp
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            if (saldo < 10) 
-            {
-                SaldoText.Text = "Onvoldoende saldo!";
-                return;
+            // Dit haalt de ingevoerde gegevens op
+            string team = TeamInput.Text;
+            string betAmountText = BetAmoutInput.Text;
+
+            if (decimal.TryParse(betAmountText, out decimal betAmount) && betAmount > 0) 
+            { 
+                if(betAmount > CurrentBalance)
+                {
+                    FeedbackMessage.Foreground = new SolidColorBrush(Microsoft.UI.Colors.Red);
+                    FeedbackMessage.Text = "Je hebt niet voldoende saldo voor deze weddenschap!";
+                    return;
+                }
+
+                // Voegt een weddenschap toe
+                Bet newBet = new Bet
+                {
+                    Team = team,
+                    Amount = betAmount,
+                };
+                Bets.Add(newBet);
+
+                // voegt een weddenschap toe aan de lijst 
+                PlacedBetList.Items.Add($"Team: {team}, Bedrag: {betAmount}");
+
+                // Pas het saldo aan
+                CurrentBalance -= betAmount;
+                UpdateBalance();
+
+                FeedbackMessage.Foreground = new SolidColorBrush(Microsoft.UI.Colors.Green);
+                FeedbackMessage.Text = $"Je hebt {betAmount} ingezet op {team}";
             }
-            if (string.IsNullOrWhiteSpace(TeamInput.Text)) 
+            else
             {
-                SaldoText.Text = "Voer een geldig team in.";
-                return;
+                FeedbackMessage.Foreground = new SolidColorBrush(Microsoft.UI.Colors.Red);
+                FeedbackMessage.Text = "Voer een geldig bedrag in!";
             }
-            
-            saldo -= 10;
-            SaldoText.Text = $"Saldo: {saldo} 4S-dollars";
+
         }
 
         public class Wedstrijd 
         { 
             public string TeamA {  get; set; }
             public string TeamB { get; set; }
-            public DateTime Datum { get; set; }
+            public string Datum { get; set; }
 
             public override string ToString()
             {
