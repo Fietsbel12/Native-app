@@ -23,36 +23,43 @@
         </Grid.ColumnDefinitions>
             
             <!-- Titel -->
-        <TextBlock Text="Wedstrijd Gok App" FontSize="24" FontWeight="Bold" TextAlignment="Center" Grid.Row="0" Margin="20,0,0,20"/>
+        <TextBlock Text="Wedstrijd Gok App" FontSize="40" FontWeight="Bold" TextAlignment="Center" Grid.Row="0" Margin="0,50,0,0"/>
 
             <!-- Synchroniseer Data -->
-        <Button x:ConnectionId='2' Content="Synchroniseer Wedstrijden"                         HorizontalAlignment="Center" Grid.Row="1" Margin="20,0,0,20"/>
+        <Button x:ConnectionId='2' Content="Synchroniseer Wedstrijden" 
+                                        
+                HorizontalAlignment="Center" 
+                Grid.Row="1" 
+                Margin="20" 
+                Background="#FFF26D1E" 
+                FontWeight="Bold" 
+                Foreground="White"/>
 
             <!-- Geplande Wedstrijden -->
-        <StackPanel Orientation="Vertical" Grid.Row="2" Margin="20,0,0,20">
-                <TextBlock Text="Geplande Wedstrijden:" FontWeight="Bold" />
-                <ListBox x:ConnectionId='9' x:Name="WedstrijdListView" Height="150" />
+        <StackPanel Orientation="Vertical" Grid.Row="2" Margin="20">
+                <TextBlock Text="Geplande Wedstrijden:" FontWeight="Bold" FontSize="20" Margin="0,10,0,10"/>
+                <ListBox x:ConnectionId='9' x:Name="WedstrijdListView" Height="150" Background="#FF4DACDB" Foreground="White"/>
             </StackPanel>
 
         <!-- Weddenschap Plaatsen -->
-        <StackPanel Orientation="Vertical" Grid.Row="3" Margin="0,0,0,20">
-            <TextBlock Text="Plaats een Weddenschap:" FontWeight="Bold" />
+        <StackPanel Orientation="Vertical" Grid.Row="3" Margin="20">
+            <TextBlock Text="Plaats een Weddenschap:" FontWeight="Bold" FontSize="20" Margin="0,10,0,10"/>
             <StackPanel Orientation="Horizontal" Spacing="10">
                 <TextBox x:ConnectionId='6' x:Name="TeamInput" Width="200" PlaceholderText="Team" />
-                <TextBox x:ConnectionId='7' x:Name="BetAmoutInput" Width="100" PlaceholderText="Kies een bedrag"/>
-                <Button x:ConnectionId='8' Content="Plaats Weddenschap"                        />
+                <TextBox x:ConnectionId='7' x:Name="BetAmoutInput" Width="200" PlaceholderText="Kies een bedrag"/>
+                <Button x:ConnectionId='8' Content="Plaats Weddenschap"                        Background="#FFF26D1E" FontWeight="Bold" Foreground="White"/>
             </StackPanel>
-            <TextBlock x:ConnectionId='5' x:Name="FeedbackMessage" Foreground="Red" TextWrapping="Wrap" Margin="0,10,0,0"/>
+            <TextBlock x:ConnectionId='5' x:Name="FeedbackMessage" Foreground="Red" TextWrapping="Wrap" Margin="20,10,0,0"/>
         </StackPanel>
 
         <!-- Gebruikers Saldo -->
-        <StackPanel Orientation="Vertical" Grid.Row="4" Margin="0,0,0,20">
-            <TextBlock x:ConnectionId='4' x:Name="SaldoText" Text="Saldo: 50 4S-dollars" FontWeight="Bold" />
+        <StackPanel Orientation="Vertical" Grid.Row="4" Margin="20">
+            <TextBlock x:ConnectionId='4' x:Name="SaldoText" Text="Saldo: 50 4S-dollars" FontWeight="Bold" FontSize="15"/>
         </StackPanel>
 
-        <StackPanel Orientation="Vertical" Grid.Row="5" Margin="0,0,0,20">
-            <TextBlock Text="Geplaaste Weddenschappen:" FontWeight="Bold"/>
-            <ListBox x:ConnectionId='3' x:Name="PlacedBetList" Height="150"/>
+        <StackPanel Orientation="Vertical" Grid.Row="5" Margin="20">
+            <TextBlock Text="Geplaaste Weddenschappen:" FontWeight="Bold" FontSize="20" Margin="0,10,0,10"/>
+            <ListBox x:ConnectionId='3' x:Name="PlacedBetList" Height="150" Background="#FF4DACDB" Foreground="White" Margin="0,0,0,30"/>
         </StackPanel>
     </Grid>
 </Window>

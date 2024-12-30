@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WedstrijdGokApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f2088f5e2c8e514ab5c98b2dc1a3324f2e5de7d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74160ace5e7ce5dd8ecc336d656be7a55090aede")]
 [assembly: System.Reflection.AssemblyProductAttribute("WedstrijdGokApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WedstrijdGokApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
