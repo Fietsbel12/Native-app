@@ -123,14 +123,14 @@ namespace WedstrijdGokApp
 
         public class Wedstrijd 
         {
-            public long team1_Id { get; set; }
-            public long teams2_Id { get; set; }
+            public long team1_id { get; set; }
+            public long teams2_id { get; set; }
 
             public string time {  get; set; }
 
             public override string ToString()
             {
-                return $"Team {team1_Id} vs Team {teams2_Id} op {time} ";
+                return $"Team {team1_id} vs Team {teams2_id} op {time}.";
             }
         }
     }
