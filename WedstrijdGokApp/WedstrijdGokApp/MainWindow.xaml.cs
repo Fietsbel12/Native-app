@@ -39,14 +39,6 @@ namespace WedstrijdGokApp
         private void LaadGegevens() 
         { 
             UpdateBalance();
-            // Test wedstrijden
-            var opgeslagenWedstrijden = new List<Wedstrijd>
-            {
-                new Wedstrijd { TeamA = "Team 1", TeamB = "Team 2", Datum = "2024-12-01" },
-                new Wedstrijd { TeamA = "Team 3", TeamB = "Team 4", Datum = "2024-12-02" }
-            };
-
-            WedstrijdListView.ItemsSource = opgeslagenWedstrijden;
         }
 
         private void UpdateBalance()
@@ -130,14 +122,15 @@ namespace WedstrijdGokApp
         }
 
         public class Wedstrijd 
-        { 
-            public string TeamA {  get; set; }
-            public string TeamB { get; set; }
-            public string Datum { get; set; }
+        {
+            public long team1_Id { get; set; }
+            public long teams2_Id { get; set; }
+
+            public string time {  get; set; }
 
             public override string ToString()
             {
-                return $"{TeamA} vs {TeamB} op {Datum}";
+                return $"Team {team1_Id} vs Team {teams2_Id} op {time} ";
             }
         }
     }
